@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: agentutility-beta
+    runtime: docker
+    plan: free
+    autoDeployTrigger: off
+    healthCheckPath: /health
+    envVars:
+      - key: AGENTUTILITY_API_KEY
+        sync: false
